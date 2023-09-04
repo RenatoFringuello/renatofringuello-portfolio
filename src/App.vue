@@ -1,5 +1,8 @@
 <template>
   <AppHeader/>
+  <main>  
+    <router-view></router-view>
+  </main>
 </template>
 
 <script>
@@ -14,5 +17,7 @@ export default {
 </script>
 
 <style>
-
+#app{
+  position: relative;
+}
 </style>
