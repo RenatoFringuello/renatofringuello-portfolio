@@ -6,6 +6,7 @@ module.exports = defineConfig({
       scss: {
         additionalData: `
           @import "@/style/partials/_variables.scss";
+          @import "@/style/partials/_custom-bootstrap.scss";
           @import "@/style/general.scss";
         `
       }

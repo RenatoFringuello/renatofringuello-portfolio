@@ -1,18 +1,8 @@
-.bg-main{
-    background-color: $main-color;
-}
-.bg-comp{
-    background-color: $comp-color;
-}
-.text-main{
-    color: $main-color;
-}
-.text-comp{
-    color: $comp-color;
-}
-.text-accent{
-    color: $accent-color;
-}
-.text-comp-accent{
-    color: $comp-accent-color;
+body{
+    color: $comp-accent-color !important;
+    background: $accent-color !important;
+
+    :not(a){
+        color: inherit !important;
+    }
 }
