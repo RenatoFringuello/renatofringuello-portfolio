@@ -28,10 +28,14 @@
                 <!-- dropdown links -->
                 <ul class="dropdown-menu dropdown-menu-dark bg-accent border-">
                   <li v-for:="sLink in link.subLinks">
-                    <router-link class="dropdown-item" :to="sLink.path">
+                    <router-link class="dropdown-item" :to="{ path:link.path, query: sLink.query }">
                       <i class="icon" :class="sLink.icon"></i>
                       {{ sLink.name.toLocaleUpperCase() }}
                     </router-link>
+                    <!-- <router-link class="dropdown-item" :to="link.path">
+                      <i class="icon" :class="sLink.icon"></i>
+                      {{ sLink.name.toLocaleUpperCase() }}
+                    </router-link> -->
                   </li>
                 </ul>
               </div>
@@ -66,12 +70,12 @@ export default {
             {
               name:'top rated',
               icon:'fa-solid fa-star',
-              path:'/projects&filter=top'
+              query: { sortBy: 'top' }
             },
             {
               name:'latest',
               icon:'fa-solid fa-bolt',
-              path:'/projects&filter=latest'
+              query: { sortBy: 'latest' }
             },
           ]
         },

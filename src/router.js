@@ -2,7 +2,7 @@ import { createRouter, createWebHistory } from "vue-router";
 
 import AppPageStatusCode from './pages/AppPageStatusCode.vue';
 import AppHome from './pages/AppHome.vue';
-// import AppProjects from './pages/AppProjects.vue';
+import AppProjects from './pages/AppProjects.vue';
 // import AppAbout from './pages/AppAbout.vue';
 
 const router = createRouter({
@@ -12,6 +12,12 @@ const router = createRouter({
             path : '/',
             name : 'home',
             component : AppHome
+        },
+        {
+            path: '/projects',
+            name: 'projects',
+            component : AppProjects,
+            props: true,// Pass route params as props
         },
         {
             path: '/404', 
